@@ -1,0 +1,120 @@
+<html>
+<head>
+<title> Calcu </title>
+</head>
+
+<body>
+	<h3> Calculator </h3>
+
+	<br>
+	<input type="number" placeholder="0" id="ndisplay">
+<br><br>
+
+	<button onclick="attachNumber(this)"> 1 </button>
+	<button onclick="attachNumber(this)"> 2 </button>
+	<button onclick="attachNumber(this)"> 3 </button>
+	&nbsp;&nbsp;&nbsp;
+	<button id="nplus" onclick='doAdd()'> + </button>
+	<button id="nminus" onclick='doSub()'> - </button>
+
+	<br>
+
+
+	<button onclick="attachNumber(this)"> 4 </button>
+	<button onclick="attachNumber(this)"> 5 </button>
+	<button onclick="attachNumber(this)"> 6 </button>
+	&nbsp;&nbsp;&nbsp;
+	<button id="nmul" onclick='doMul()'> * </button>
+	<button id="ndiv" onclick='doDiv()'> / </button>
+
+
+	<br>
+	
+
+	<button onclick="attachNumber(this)"> 7 </button>
+	<button onclick="attachNumber(this)"> 8 </button>
+	<button onclick="attachNumber(this)"> 9 </button>
+	&nbsp;&nbsp;&nbsp;
+	<button id="nmod" onclick='doMod()'> mod </button>
+	<button id="nexp" onclick='doExp()'> ^ </button>
+
+	
+	<br>
+
+	<button onclick="attachNumber(this)"> 0 </button>
+	<button type='button' onclick='doEq()'> = </button>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;
+	<button id="nbk" onclick='doBk()'> <- </button>
+	<button id="nclr" onclick='doClr()'> clr </button>
+
+
+	<script type="text/javascrpt">
+		let n = document.getElementById('ndisplay');
+		let numberHolder;
+		let optr;
+
+		function attachNumber(e){
+			n.value += e.innerHTML;
+		}	
+
+		function doAdd() {
+			optr = "+";
+			numberHolder = parseInt(n.value);
+			n.value = "";
+		}
+
+		function doSub() {
+			optr = "-";
+			numberHolder = parseInt(n.value);
+			n.value = "";
+		}
+
+		function doMul() {
+			optr = "*";
+			numberHolder = parseInt(n.value);
+			n.value = "";
+		}
+
+		function doDiv() {
+			optr = "/";
+			numberHolder = parseInt(n.value);
+			n.value = "";
+		}
+
+		function doMod() {
+			optr = "mod";
+			numberHolder = parseInt(n.value);
+			n.value = "";
+		}
+
+		function doExp() {
+			optr = "^";
+			numberHolder = parseInt(n.value);
+			n.value = "";
+		}
+
+
+		function result(){
+			switch (optr){
+				case "+" : n.value = numberHolder + parseInt(n.value); break;
+				case "-" : n.value = numberHolder - parseInt(n.value); break;
+				case "*" : n.value = numberHolder * parseInt(n.value); break;
+				case "/" : n.value = numberHolder / parseInt(n.value); break;
+				case "%" : n.value = numberHolder % parseInt(n.value); break;
+				case "^" : n.value =  numberHolder ^ parseInt(n.value); break;
+				default: console.log('no operator defined'); break;
+
+							}
+			}
+		
+
+	</script>
+
+</body>
+
+
+
+
+
+</html>

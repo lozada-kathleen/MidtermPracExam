@@ -1,0 +1,15 @@
+function javafunc(){
+	let xMLH = new xHTMLHttpRequest();
+	let myList = document.getElementByID
+	XMLH.onreadystatechange;
+	if (xMHL.readystate == 4 && xMHL.status==200){
+		for ( i < data.length, i++)
+			console.log();
+				html =
+
+			}
+
+	xMLH.get ("GET", "https://jsonplaceholder.typicode.com/todos", true);
+	xMLH.send();
+
+}
